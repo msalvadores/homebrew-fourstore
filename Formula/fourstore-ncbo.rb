@@ -27,7 +27,7 @@ class FourstoreNcbo < Formula
   def install
     args  = ["--prefix=#{prefix}",
             "--with-storage-path=#{var}/fourstore",
-            "--sysconfdir=#{etc}/fourstore"]
+            ]
     if build.head? then
       require "Date"
       system "echo '#{DateTime.now.to_s}--trunk' > ./.version"
