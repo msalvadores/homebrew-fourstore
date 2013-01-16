@@ -1,6 +1,6 @@
 require 'formula'
 
-class Fourstore < Formula
+class FourstoreNcbo < Formula
   homepage 'http://4store.org/'
 
   if build.include? 'ncbo'
