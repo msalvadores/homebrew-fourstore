@@ -12,6 +12,7 @@ class FourstoreNcbo < Formula
   end
 
   depends_on 'pkg-config' => :build
+  depends_on 'libtool' => :build
   depends_on 'glib'
   depends_on 'raptor'
   depends_on 'rasqal'
