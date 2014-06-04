@@ -3,6 +3,8 @@ require 'formula'
 class FourstoreNcbo < Formula
   homepage 'http://4store.org/'
 
+  option 'ncbo', "Use NCBO's fork of 4store"
+
   if build.include? 'ncbo'
     head 'git://github.com/ncbo/4store.git'
   else
