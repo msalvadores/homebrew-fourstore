@@ -6,9 +6,9 @@ class FourstoreNcbo < Formula
   if build.include? 'ncbo'
     head 'git://github.com/ncbo/4store.git'
   else
-    url 'http://4store.org/download/4store-v1.1.5.tar.gz'
+    url 'http://github.com/garlik/4store/archive/v1.1.5.tar.gz'
     head 'git@github.com:garlik/4store.git'
-    sha1 '32ef328f846b5585e040ae587c6429d44b070d9a'
+    sha256 '5420a048b5e7c5abc5a95f24ab17ab4c9b90bc012dbf97e16aeab07f095aa102'
   end
 
   depends_on 'pkg-config' => :build
@@ -51,7 +51,7 @@ class FourstoreNcbo < Formula
     Start up HTTP SPARQL server without daemonizing:
         4s-httpd -p 8000 -D mydb
 
-    See http://4store.org/trac/wiki/Documentation for more information.
+    See http://github.com/garlik/4store for more information.
     EOS
   end
 
