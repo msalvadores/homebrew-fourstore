@@ -38,7 +38,7 @@ class FourstoreNcbo < Formula
     system "make install"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Databases will be created at #{var}/fourstore.
 
     Create and start up a database:
