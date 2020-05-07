@@ -2,7 +2,7 @@ require 'formula'
 
 class FourstoreNcbo < Formula
   desc "Fourstore RDF database, customized for BioPortal"
-  homepage 'http://4store.org/'
+  homepage "https://github.com/ncbo/4store"
 
   if build.include? 'ncbo'
     head 'git://github.com/ncbo/4store.git'
