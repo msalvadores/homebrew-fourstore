@@ -5,7 +5,7 @@ class FourstoreNcbo < Formula
   homepage "https://github.com/ncbo/4store"
   url "https://github.com/ncbo/4store/archive/v1.1.6-NCBO-SNAPSHOT-1.tar.gz"
   head "git@github.com:ncbo/4store.git"
-  sha256 "5420a048b5e7c5abc5a95f24ab17ab4c9b90bc012dbf97e16aeab07f095aa102"
+  sha256 "1da20d132065ce6d12df5de2b3423d719680259822ada0029132b571df031745"
   revision 1
 
   depends_on 'pkg-config' => :build
