@@ -8,19 +8,16 @@ class FourstoreNcbo < Formula
   sha256 "1da20d132065ce6d12df5de2b3423d719680259822ada0029132b571df031745"
   revision 1
 
-  depends_on 'pkg-config' => :build
-  depends_on 'libtool' => :build
-  depends_on 'glib'
-  depends_on 'raptor'
-  depends_on 'rasqal'
-  depends_on 'pcre'
-
-  if build.head?
-    depends_on "gettext"
-    depends_on "autogen"
-    depends_on "autoconf"
-    depends_on "automake"
-  end
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+  depends_on "autogen"
+  depends_on "gettext"
+  depends_on "glib"
+  depends_on "pcre"
+  depends_on "raptor"
+  depends_on "rasqal"
 
   def install
     args  = ["--prefix=#{prefix}",
