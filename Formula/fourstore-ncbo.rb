@@ -20,16 +20,13 @@ class FourstoreNcbo < Formula
   depends_on "rasqal"
 
   def install
-    args  = ["--prefix=#{prefix}",
-            "--with-storage-path=#{var}/fourstore",
-            ]
-    if build.head? then
-      require "Date"
-      system "echo '#{DateTime.now.to_s}--trunk' > ./.version"
-      system "./autogen.sh --verbose"
-    end
-    system "./configure", *args
-    system "make install"
+    (buildpath/".version").write("v1.1.6-NCBO-SNAPSHOT-1")
+    system "./autogen.sh"
+    (var/"fourstore").mkpath
+    system "./configure", "--prefix=#{prefix}", 
+                          "--with-storage-path=#{var}/fourstore", 
+                          "--sysconfdir=#{etc}/fourstore"
+    system "make", "install"
   end
 
   def caveats; <<~EOS
