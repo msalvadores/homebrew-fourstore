@@ -29,20 +29,21 @@ class FourstoreNcbo < Formula
     system "make", "install"
   end
 
-  def caveats; <<~EOS
-    Databases will be created at #{var}/fourstore.
+  def caveats
+    <<~EOS
+      Databases will be created at #{var}/fourstore.
 
-    Create and start up a database:
-        4s-backend-setup mydb
-        4s-backend mydb
+      Create and start up a database:
+          4s-backend-setup mydb
+          4s-backend mydb
 
-    Load RDF data:
-        4s-import mydb datafile.rdf
+      Load RDF data:
+          4s-import mydb datafile.rdf
 
-    Start up HTTP SPARQL server without daemonizing:
-        4s-httpd -p 8000 -D mydb
+      Start up HTTP SPARQL server without daemonizing:
+          4s-httpd -p 8000 -D mydb
 
-    See http://github.com/garlik/4store for more information.
+      See http://github.com/garlik/4store for more information.
     EOS
   end
 
