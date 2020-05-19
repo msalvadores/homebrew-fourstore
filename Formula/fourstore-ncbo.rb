@@ -43,7 +43,7 @@ class FourstoreNcbo < Formula
       Start up HTTP SPARQL server without daemonizing:
           4s-httpd -p 8000 -D mydb
 
-      See http://github.com/garlik/4store for more information.
+      See https://github.com/ncbo/4store for more information.
     EOS
   end
 
